@@ -17,4 +17,10 @@ remove_container:
 #This will remove both running and stopped containers
 	docker rm $(docker ps -aq) 
 
+run_docker_compose:
+	docker-compose up --build
+
+stop_docker_compose:
+	docker-compose down
+
 
