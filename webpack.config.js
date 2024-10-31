@@ -20,6 +20,12 @@ module.exports = {
   // Resolve file extensions
   resolve: {
     extensions: ['.js', '.json'],
+    fallback: {
+      buffer: require.resolve('buffer/'),
+      path: require.resolve('path-browserify'),
+      url: require.resolve('url/'),
+      util: require.resolve('util/'),
+    },
   },
 
   // Loaders configuration
