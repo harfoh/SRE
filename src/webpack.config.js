@@ -5,7 +5,7 @@ module.exports = {
   mode: 'development', // Change to 'production' for production builds
 
   // Entry point of the application
-  entry: './src/app.js',
+  entry: '../src/app.js',
 
   // Output configuration
   output: {
