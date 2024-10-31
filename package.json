@@ -33,10 +33,10 @@
       "jest": "^27.0.0",
       "nodemon": "^2.0.7",
       "supertest": "^6.1.3",
-      "buffer": "^6.0.3", // Add this line
-      "path-browserify": "^1.0.1", // Add this line
-      "url": "^0.11.0", // Add this line
-      "util": "^0.12.3" // Add this line
+      "buffer": "^6.0.3", 
+      "path-browserify": "^1.0.1", 
+      "url": "^0.11.0", 
+      "util": "^0.12.3" 
     },
     "jest": {
       "testEnvironment": "node"
