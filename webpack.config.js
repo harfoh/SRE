@@ -21,10 +21,10 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.json'],
     fallback: {
-      buffer: require.resolve('buffer/'),
+      buffer: require.resolve('buffer'),
       path: require.resolve('path-browserify'),
-      url: require.resolve('url/'),
-      util: require.resolve('util/'),
+      url: require.resolve('url'),
+      util: require.resolve('util'),
     },
   },
 
