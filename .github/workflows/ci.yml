@@ -21,11 +21,10 @@ jobs:
         run: npm install
       - name: unit test
         run: npm test
-  eslint:
+  linting:
     runs-on: ubuntu-latest
-    steps:
-      - name: Code Linting    
-      - uses: actions/checkout@v1
+    steps:    
+      - uses: actions/checkout@v3
       - uses: stefanoeb/eslint-action@1.0.2
         with:
           files: src/   
