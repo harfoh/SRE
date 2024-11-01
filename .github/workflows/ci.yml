@@ -1,7 +1,10 @@
 name: SRE Worklows
 
 on:
-  workflow_dispatch
+  push:
+    paths:
+      - 'src/**'
+  workflow_dispatch:
 ##   branches: [main]
 
 jobs:
