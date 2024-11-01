@@ -1,17 +1,17 @@
-const Student = require('../models/student'); // Ensure the path is correct
+const Student = require('../models/student'); 
 
 exports.addStudent = async (req, res) => {
   try {
-    const student = new Student(req.body); // Ensure this line is correct
+    const student = new Student(req.body); 
     await student.save();
     res.status(201).json(student);
   } catch (error) {
     console.error("Error details:", error);
-    res.status(400).json({ message: "Error creating student", error: error.message });
+    res.status(400).json({ message: "Errr creating student", error: error.message });
   }
 };
 
-// Read All
+// Read Al
 exports.getAllStudents = async (req, res) => {
   try {
     const students = await Student.find();
