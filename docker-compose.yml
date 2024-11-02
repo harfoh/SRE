@@ -5,14 +5,38 @@ services:
       ports:
           - "27017:27017"
 
-    api:
+    backend:
+      #image: api:v1.0.0
       build: .
-      ports:
-        - 3000:3000
+      #ports:
+       #- 3000
       depends_on:
        - mongo
       environment:
         - MONGO_URI=mongodb://mongo:27017/studentdb
       entrypoint: ["./db_checks.sh", "node", "src/app.js"]  
- #     env:
- #       -         
+      #deploy:
+        #replicas: 2
+    nginx:
+      image: nginx:latest
+      #build: ./nginx
+      ports:
+        - "3000:80"
+      volumes:
+        - /home/fola/sre/nginx.conf:/etc/nginx/nginx.conf     
+      depends_on:
+        - mongo
+        - backend    
+
+    backend_2:
+      #image: api:v1.0.0
+      build: .
+      #ports:
+       #- 3000
+      depends_on:
+       - mongo
+      environment:
+        - MONGO_URI=mongodb://mongo:27017/studentdb
+      entrypoint: ["./db_checks.sh", "node", "src/app.js"]  
+      #deploy:
+        #replicas: 2

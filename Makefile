@@ -23,4 +23,13 @@ run_docker_compose:
 stop_docker_compose:
 	docker-compose down
 
+build_api:
+	npm run build
 
+test_api:
+	npm test
+
+lint_api:
+	npx eslint .
+
+	
