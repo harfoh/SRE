@@ -1,0 +1,6 @@
+apiVersion: v1
+kind: ConfigMap
+metadata: 
+  name: db-conf
+data:
+  MONGO_URI: "mongodb://db-svc.default.svc.cluster.local:27017/studentdb"
